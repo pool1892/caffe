@@ -4,24 +4,24 @@ item {
   display_name: "background"
 }
 item {
-  name: "full_cart"
+  name: "aeroplane"
   label: 1
-  display_name: "full_cart"
+  display_name: "aeroplane"
 }
 item {
-  name: "empty_cart"
+  name: "bicycle"
   label: 2
-  display_name: "empty_cart"
+  display_name: "bicycle"
 }
 item {
-  name: "full_basket"
+  name: "bird"
   label: 3
-  display_name: "full_basket"
+  display_name: "bird"
 }
 item {
-  name: "empty_basket"
+  name: "boat"
   label: 4
-  display_name: "empty_basket"
+  display_name: "boat"
 }
 item {
   name: "bottle"
