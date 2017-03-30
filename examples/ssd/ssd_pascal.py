@@ -174,6 +174,7 @@ batch_sampler = [
         ]
 train_transform_param = {
         'mirror': True,
+        'force_color': True,
         'mean_value': [104, 117, 123],
         'resize_param': {
                 'prob': 1,
