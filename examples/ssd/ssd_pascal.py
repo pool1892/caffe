@@ -372,8 +372,8 @@ solver_param = {
     'gamma': 0.1,
     'momentum': 0.9,
     'iter_size': iter_size,
-    'max_iter': 120000,
-    'snapshot': 80000,
+    'max_iter': 200000,
+    'snapshot': 10000,
     'display': 10,
     'average_loss': 10,
     'type': "SGD",
@@ -388,7 +388,6 @@ solver_param = {
     'ap_version': "11point",
     'test_initialization': False,
     }
-
 
 # parameters for generating detection output.
 det_out_param = {
