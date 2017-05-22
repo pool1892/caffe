@@ -4,22 +4,12 @@ item {
   display_name: "background"
 }
 item {
-  name: "full_cart"
+  name: "cart"
   label: 1
-  display_name: "full_cart"
+  display_name: "cart"
 }
 item {
-  name: "empty_cart"
+  name: "basket"
   label: 2
-  display_name: "empty_cart"
-}
-item {
-  name: "full_basket"
-  label: 3
-  display_name: "full_basket"
-}
-item {
-  name: "empty_basket"
-  label: 4
-  display_name: "empty_basket"
+  display_name: "basket"
 }
