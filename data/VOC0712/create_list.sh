@@ -2,7 +2,7 @@
 
 root_dir=/root/data/VOCdevkit/
 sub_dir=ImageSets/Main
-bash_dir=/root/caffe/
+bash_dir=/root/caffe/data/VOC0712/
 for dataset in trainval test
 do
   dst_file=$bash_dir/$dataset.txt
