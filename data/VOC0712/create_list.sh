@@ -1,8 +1,8 @@
 #!/bin/bash
 
-root_dir=$HOME/data/VOCdevkit/
+root_dir=/root/data/VOCdevkit/
 sub_dir=ImageSets/Main
-bash_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+bash_dir=/root/caffe/
 for dataset in trainval test
 do
   dst_file=$bash_dir/$dataset.txt
