@@ -1,10 +1,11 @@
-cur_dir=$(cd $( dirname ${BASH_SOURCE[0]} ) && pwd )
-root_dir=$cur_dir/../..
+#cur_dir=$(cd $( dirname ${BASH_SOURCE[0]} ) && pwd )
+cur_dir=/root/caffe/data/VOC0712/
+root_dir=/root/caffe
 
 cd $root_dir
 
 redo=1
-data_root_dir="$HOME/data/VOCdevkit"
+data_root_dir=/root/data/VOCdevkit"
 dataset_name="VOC0712"
 mapfile="$root_dir/data/$dataset_name/labelmap_voc.prototxt"
 anno_type="detection"
