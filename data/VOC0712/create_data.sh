@@ -10,7 +10,7 @@ mapfile="$root_dir/data/$dataset_name/labelmap_voc.prototxt"
 anno_type="detection"
 db="lmdb"
 min_dim=0
-max_dim=
+max_dim=500
 width=300
 height=300
 
