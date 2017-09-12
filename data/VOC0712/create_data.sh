@@ -10,9 +10,9 @@ mapfile="$root_dir/data/$dataset_name/labelmap_voc.prototxt"
 anno_type="detection"
 db="lmdb"
 min_dim=0
-max_dim=0
-width=0
-height=0
+max_dim=
+width=300
+height=300
 
 extra_cmd="--encode-type=jpg --encoded"
 if [ $redo ]
