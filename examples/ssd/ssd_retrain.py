@@ -224,7 +224,7 @@ test_transform_param = {
 
 # If true, use batch norm for all newly added layers.
 # Currently only the non batch norm version has been tested.
-use_batchnorm = False
+use_batchnorm = True
 lr_mult = 1
 # Use different initial learning rate.
 if use_batchnorm:
@@ -366,18 +366,26 @@ test_iter = int(math.ceil(float(num_test_image) / test_batch_size))
 
 solver_param = {
     # Train parameters
-    'base_lr': base_lr,
-    'weight_decay': 0.0005,
-    'lr_policy': "multistep",
+    # 'base_lr': base_lr,
+    #'weight_decay': 0.0005,
+    #'lr_policy': "multistep",
+    type: "Adam",
+    base_lr: 0.0001,
+    weight_decay: 0.0001,
+    momentum: 0.9,
+    momentum2: 0.999,
+    delta: 0.00000001,
+    lr_policy: "fixed",
+    # regularization_type: "L2",
     'stepvalue': [80000, 100000, 120000],
     'gamma': 0.1,
-    'momentum': 0.9,
+    #'momentum': 0.9,
     'iter_size': iter_size,
     'max_iter': 120000,
     'snapshot': 5000,
     'display': 10,
     'average_loss': 10,
-    'type': "SGD",
+    #'type': "SGD",
     'solver_mode': solver_mode,
     'device_id': device_id,
     'debug_info': False,
