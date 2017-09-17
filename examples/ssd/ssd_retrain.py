@@ -224,7 +224,7 @@ test_transform_param = {
 
 # If true, use batch norm for all newly added layers.
 # Currently only the non batch norm version has been tested.
-use_batchnorm = True
+use_batchnorm = False
 lr_mult = 1
 # Use different initial learning rate.
 if use_batchnorm:
