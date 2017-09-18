@@ -142,7 +142,7 @@ def parse_args():
     parser.add_argument('--model_weights',
                         default='/root/logs/'
                         'VGG_VOC0712_SSD_300x300_iter_20000.caffemodel')
-    parser.add_argument('--image_file', default='examples/images/cart1.jpg')
+    parser.add_argument('--image_file', default='examples/images/cart2.jpg')
     return parser.parse_args()
 
 if __name__ == '__main__':
