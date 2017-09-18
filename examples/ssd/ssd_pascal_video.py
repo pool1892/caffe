@@ -68,7 +68,7 @@ def AddExtraLayers(net, use_batchnorm=True, lr_mult=1):
 ### Modify the following parameters accordingly ###
 # The directory which contains the caffe code.
 # We assume you are running the script at the CAFFE_ROOT.
-caffe_root = os.getcwd()
+caffe_root = /root/caffe
 
 # Set true if you want to start training right after generating all files.
 run_soon = True
@@ -242,7 +242,7 @@ mbox_layers = CreateMultiBoxHead(net, data_layer='data', from_layers=mbox_source
         use_batchnorm=use_batchnorm, min_sizes=min_sizes, max_sizes=max_sizes,
         aspect_ratios=aspect_ratios, steps=steps, normalizations=normalizations,
         num_classes=num_classes, share_location=share_location, flip=flip, clip=clip,
-        prior_variance=prior_variance, kernel_size=3, pad=1, lr_mult=lr_mult)
+        prior_variance=prior_variance, kernel_size=3, pad=1, lr_mult=lr_mult, conf_postfix="from_imagenet")
 
 conf_name = "mbox_conf"
 if conf_loss_type == P.MultiBoxLoss.SOFTMAX:
