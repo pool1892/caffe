@@ -172,17 +172,7 @@ snapshot_prefix = "{}/{}".format(snapshot_dir, model_name)
 job_file = "{}/{}.sh".format(job_dir, model_name)
 
 # Find most recent snapshot.
-max_iter = 0
-for file in os.listdir(snapshot_dir):
-  if file.endswith(".caffemodel"):
-    basename = os.path.splitext(file)[0]
-    iter = int(basename.split("{}_iter_".format(model_name))[1])
-    if iter > max_iter:
-      max_iter = iter
 
-if max_iter == 0:
-  print("Cannot find snapshot in {}".format(snapshot_dir))
-  sys.exit()
 
 # The resume model.
 # pretrain_model = "{}_iter_{}.caffemodel".format(snapshot_prefix, max_iter)
