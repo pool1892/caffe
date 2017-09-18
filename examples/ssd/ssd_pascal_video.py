@@ -185,8 +185,8 @@ if max_iter == 0:
   sys.exit()
 
 # The resume model.
-pretrain_model = "{}_iter_{}.caffemodel".format(snapshot_prefix, max_iter)
-
+# pretrain_model = "{}_iter_{}.caffemodel".format(snapshot_prefix, max_iter)
+pretrain_model = "/root/logs/VGG_VOC0712_SSD_300x300_iter_25000.caffemodel"
 # parameters for generating priors.
 # minimum dimension of input image
 min_dim = 300
