@@ -17,17 +17,18 @@ now = datetime.datetime.now()
 
 # Define all the folders
 caffe_root = '/root/caffe'
-data_root = '/root/images'
-input_subdir = 'input'
-output_subdir = 'output_' + now.strftime("%Y-%m-%d_%H:%M")
+
+input_dir = "/root/input"
+output_dir = "/root/output"
+
+output_unique = os.path.join(output_dir, now.strftime("%Y-%m-%d_%H:%M"))
 boxed_images_subsubdir = 'with_boxes'
 xml_subsubdir = 'xml'
 
-input_dir = os.path.join(data_root, input_subdir)
 
-xml_dir = os.path.join(data_root, output_subdir, xml_subsubdir)
+xml_dir = os.path.join(output_unique,xml_subsubdir)
 
-boxed_dir = os.path.join(data_root, output_subdir, boxed_images_subsubdir)
+boxed_dir =  os.path.join(output_unique, boxed_images_subsubdir)
 
 
 for directory in [xml_dir, boxed_dir]:
@@ -237,11 +238,11 @@ def parse_args():
     parser.add_argument('--labelmap_file',
                         default='/root/caffe/data/VOC0712/labelmap_voc.prototxt')
     parser.add_argument('--model_def',
-                        default='/root/logs/deploy.prototxt')
+                        default='/root/ssd/deploy.prototxt')
     parser.add_argument('--image_resize', default=300, type=int)
     parser.add_argument('--model_weights',
-                        default='/root/logs/'
-                        'VGG_VOC0712_SSD_300x300_iter_20000.caffemodel')
+                        default='/root/ssd/'
+                        'weights.caffemodel')
     return parser.parse_args()
 
 if __name__ == '__main__':
