@@ -221,7 +221,7 @@ def main(args):
                         "ymin": str(ymin), 
                         "xmax": str(xmax), 
                         "ymax": str(ymax)}
-            category = str(item[-2])
+            category = str(item[-1])
             xml_root = add_detected_object_to_xml(xml_root, coords, category)
 
             draw.rectangle([xmin, ymin, xmax, ymax], outline=(255, 0, 0))
