@@ -225,7 +225,7 @@ def main(args):
             xml_root = add_detected_object_to_xml(xml_root, coords, category)
 
             draw.rectangle([xmin, ymin, xmax, ymax], outline=(255, 0, 0))
-            draw.text([xmin, ymin], str(round(int(item[-2], 2) + " " + category, (0, 0, 255))
+            draw.text([xmin, ymin], str(round(int(item[-2], 2))) + " " + category, (0, 0, 255))
             
         tree = etree.ElementTree(xml_root)
         tree.write(xml_name, pretty_print=True, xml_declaration=True)
