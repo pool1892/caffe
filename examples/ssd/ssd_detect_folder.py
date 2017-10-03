@@ -158,15 +158,15 @@ def main(args):
         #with open(xml_name, "w") as xml_file:
 
         def generate_xml_stem(image_name = image, image_width = width, image_height = height):
-            root=etree.Element("Annotation")
+            root=etree.Element("annotation")
 
             folder = etree.SubElement(root, "folder")
-
+            folder.text = output_dir
             filename=etree.SubElement(root,"filename")
             filename.text=image_name
 
             path = etree.SubElement(root,"path")
-
+            path.text = "."
             source = etree.SubElement(root,"source")
             database = etree.SubElement(source,"database")
             database.text = "Unknown"
@@ -193,7 +193,9 @@ def main(args):
             pose = etree.SubElement(obj, "pose")
             pose.text = "Unspecified"
             truncated = etree.SubElement(obj, "truncated")
+            truncated.text = "0"
             difficult = etree.SubElement(obj, "difficult")
+            difficult.text = "0"
             bndbox = etree.SubElement(obj, "bndbox")
             xmin = etree.SubElement(bndbox, "xmin")
             ymin = etree.SubElement(bndbox, "ymin")
